@@ -3,11 +3,12 @@
 <head>
   <title>web page</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+  <style>
     .container {
       display: flex;
     }
@@ -17,14 +18,16 @@
       left: 0;
       height: 100vh;
       flex: 0 0 20%;
-      background-color: lightgray;
+      background-color:white ;
       padding: 20px;
       box-sizing: border-box;
+      border-right: 2px solid #333;
     }
 
     .header {
       color: #333; 
-      font-family: Arial, sans-serif; 
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
       font-size: 64px; 
     }
 
@@ -35,13 +38,23 @@
       padding: 20px; 
     }
 
+    .dropdowns {
+        display: flex;
+      flex-direction: column;
+    }
+
     .dropdown {
+      background-color: #333;
       position: relative;
       display: inline-block;
       cursor: pointer;
       padding-bottom: 65px;
       font-size: 30px;
-      font-family: Arial, sans-serif; 
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      color:#f9f9f9;
+      width:350px;
     }
 
     .dropdown-content {
@@ -61,6 +74,7 @@
       content: '\25B6';
       display: inline-block;
       margin-left: 5px;
+      color: #f9f9f9;
     }
 
     .social-media-images {
@@ -68,34 +82,117 @@
       position: fixed;
       bottom: 20px;
       left: 12%;
-      transform: translateX(-50%);
       justify-content: space-between;
-    }
-
-    .social-media-images img {
-      margin-right: 35px;
-      width: 30px;
-      height: 30px;
     }
 
     .text-page {
       color: #333; 
-      font-family: Arial, sans-serif; 
-      font-size: 30px; 
+      font-family: Poppins; 
+      font-size: 20px; 
     }
 
     .main {
-        padding-left: 10%;
+        padding-left: 5%;
         flex-direction: column;
         padding-right: 5%;
     }
 
+    .header3 {
+      color: #333; 
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 50px; 
+    }
+
+    .main-images{
+        padding-left:10%;
+        max-height: 400px;
+        max-width: 700px;
+    }
+
+    .logo{
+        width: 350px;
+    }
+
+    @media (max-width: 600px){
+        .column {
+            top: 0;
+      height: 100vh;
+      flex: 0 0 20%;
+      background-color:white ;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 2px solid #333;
+        }
+        .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-images{
+        padding-left:10%;
+        max-height: 300px;
+        max-width: 500px;
+    } .social-media-images {
+      display: none;
+    }
+}
+
+    @media (max-width: 800px) and (min-width: 601px){
+        .column {
+            top: 0;
+      height: 100vh;
+      flex: 0 0 20%;
+      background-color:white ;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 2px solid #333;
+        }
+        .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-images{
+        padding-left:10%;
+        max-height: 300px;
+        max-width: 500px;
+    } .social-media-images {
+      display: none;
+    }
+
+    .dropdowns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .dropdown {
+      display: flex;
+      background-color: #333;
+      cursor: pointer;
+      padding-bottom: 65px;
+      padding-left: 5%;
+      padding-right: 5%;
+      font-size: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      color:#f9f9f9;
+      height: 30px;
+      width: 150px;
+    }
+    .logo {
+        width:600px;
+    }
+    }
+
   </style>
 </head>
-<body>
   <div class="container">
     <div class="column">
-      <h1 class="header2">Starkville</br>High School</h1>
+        <img src="starkv5.png"class="logo"> </img>
+        <div class="dropdowns">
       <div class="dropdown">
         Districts<span class="dropdown-arrow"></span>
         <div class="dropdown-content">
@@ -104,7 +201,6 @@
           <p href="#">some district</p>
         </div>
       </div>
-    </br>
       <div class="dropdown">
         Directory<span class="dropdown-arrow"></span>
         <div class="dropdown-content">
@@ -115,7 +211,6 @@
           <p href="#">Academics</p>
         </div>
       </div>
-    </br>
       <div class="dropdown">
         Our School<span class="dropdown-arrow"></span>
         <div class="dropdown-content">
@@ -127,15 +222,14 @@
           <p href="#">Registration</p>
         </div>
       </div>
-    </br>
+    </div>
       <div class="social-media-images">
-        <img src="facebook-logo-symbol-free-svg-file.png">
-        <img src="Black-Instagram-Logo-Transparent.png">
-        <img src="Xtwitter_logo.png">
+        <p>District Calendar</p>
+        <p>&#x2661</p>
       </div>
     </div>
     <div class="main">
-    <img src="starkv1.png" width="700">
+   <h1 class="header3">Starkville High School</h1>
     <p class="text-page">Starkville High School offers serves all 9th-12th grade students
          in the Starkville Oktibbeha School District and offers a high school
           experience rich in academics, arts, athletics and extra-curricular 
@@ -143,6 +237,7 @@
           committed to providing each student with a personalized education 
           in a student-centered, 21st century learning environment that
            inspires critical thinking, problem solving, collaboration and communication.</p>
+           <img src="starkv4.png" class="main-images" width="700">
     <h1 class="header">Academics</h1>
     </br>
     
@@ -157,7 +252,7 @@
               site visits and student internships leverage students' personal interests 
               to prepare them for excellence after high school -- whether their goals 
               are college, the military, entrepreneurship or the workforce. </p> </br>
-              <img src="starkv2.png" >
+              <img src="starkv2.png" class="main-images">
               <p class="text-page">
             Partnered with the Millsaps Career & Technology Center, located on the SHS campus,
              Starkville High offers an array of CTE course offerings that enable students
@@ -205,7 +300,7 @@
             </p> </br>
 
             <h1 class="header">Makerspace</h1>
-            <img src="starkv3.png" width="700" >
+            <img src="starkv3.png" class="main-images" >
             </br>
          <p class="text-page">The newest Jacket MakerSpace -- The Collaboratory at SHS
              -- features an impressive collection of low-tech and high-tech equipment 
@@ -218,7 +313,6 @@
                allowing our students to stretch their creative skills, learn new 
                technologies, and even launch fundraisers and business opportunities.
             </p> </br>
-            </div>
+    </div>
   </div>
-</body>
 </html>
